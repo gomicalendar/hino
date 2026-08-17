@@ -1,0 +1,3292 @@
+{
+  "schema_version": "1.0",
+  "municipality": "東京都日野市",
+  "area": {
+    "id": "toyoda",
+    "name": "豊田・東豊田・川辺堀之内・神明"
+  },
+  "edition": {
+    "era": "令和8年度",
+    "year": 2026
+  },
+  "source": {
+    "file": "r8.toyoda.pdf",
+    "sha256": "78c833f9f95dba032e119c43baed8bf00f451f90269d0487c5b7d5fc05eadbcf",
+    "pages": 15,
+    "converted_at": "2026-08-17T16:32:54+09:00"
+  },
+  "range": {
+    "start": "2025-12-01",
+    "end": "2026-12-31"
+  },
+  "months": [
+    {
+      "year": 2025,
+      "month": 12,
+      "page": 2
+    },
+    {
+      "year": 2026,
+      "month": 1,
+      "page": 3
+    },
+    {
+      "year": 2026,
+      "month": 2,
+      "page": 4
+    },
+    {
+      "year": 2026,
+      "month": 3,
+      "page": 5
+    },
+    {
+      "year": 2026,
+      "month": 4,
+      "page": 6
+    },
+    {
+      "year": 2026,
+      "month": 5,
+      "page": 7
+    },
+    {
+      "year": 2026,
+      "month": 6,
+      "page": 8
+    },
+    {
+      "year": 2026,
+      "month": 7,
+      "page": 9
+    },
+    {
+      "year": 2026,
+      "month": 8,
+      "page": 10
+    },
+    {
+      "year": 2026,
+      "month": 9,
+      "page": 11
+    },
+    {
+      "year": 2026,
+      "month": 10,
+      "page": 12
+    },
+    {
+      "year": 2026,
+      "month": 11,
+      "page": 13
+    },
+    {
+      "year": 2026,
+      "month": 12,
+      "page": 14
+    }
+  ],
+  "categories": [
+    {
+      "id": "burnable",
+      "label": "可燃ごみ",
+      "short_label": "可燃",
+      "kind": "gomi"
+    },
+    {
+      "id": "nonburnable",
+      "label": "不燃ごみ",
+      "short_label": "不燃",
+      "kind": "gomi"
+    },
+    {
+      "id": "plastic",
+      "label": "プラスチック",
+      "short_label": "プラ",
+      "kind": "gomi"
+    },
+    {
+      "id": "hazardous",
+      "label": "有害ごみ",
+      "short_label": "有害",
+      "kind": "gomi"
+    },
+    {
+      "id": "bottle",
+      "label": "びん",
+      "short_label": "びん",
+      "kind": "shigen"
+    },
+    {
+      "id": "can",
+      "label": "かん",
+      "short_label": "かん",
+      "kind": "shigen"
+    },
+    {
+      "id": "pet_bottle",
+      "label": "ペットボトル",
+      "short_label": "ペットボトル",
+      "kind": "shigen"
+    },
+    {
+      "id": "newspaper",
+      "label": "新聞",
+      "short_label": "新聞",
+      "kind": "shigen"
+    },
+    {
+      "id": "magazine",
+      "label": "雑誌・雑紙類",
+      "short_label": "雑誌・雑紙",
+      "kind": "shigen"
+    },
+    {
+      "id": "cardboard",
+      "label": "段ボール",
+      "short_label": "段ボール",
+      "kind": "shigen"
+    },
+    {
+      "id": "paper_pack",
+      "label": "紙パック類",
+      "short_label": "紙パック",
+      "kind": "shigen"
+    },
+    {
+      "id": "cloth",
+      "label": "古着・毛布・古布類",
+      "short_label": "古着・古布",
+      "kind": "shigen"
+    },
+    {
+      "id": "small_appliance",
+      "label": "小型家電・金属類",
+      "short_label": "小型家電",
+      "kind": "shigen"
+    }
+  ],
+  "days": [
+    {
+      "date": "2025-12-01",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-02",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2025-12-03",
+      "weekday": "wed",
+      "categories": []
+    },
+    {
+      "date": "2025-12-04",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-05",
+      "weekday": "fri",
+      "categories": [
+        "plastic"
+      ]
+    },
+    {
+      "date": "2025-12-06",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2025-12-07",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2025-12-08",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-09",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2025-12-10",
+      "weekday": "wed",
+      "categories": []
+    },
+    {
+      "date": "2025-12-11",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-12",
+      "weekday": "fri",
+      "categories": [
+        "plastic"
+      ]
+    },
+    {
+      "date": "2025-12-13",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2025-12-14",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2025-12-15",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-16",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2025-12-17",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2025-12-18",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-19",
+      "weekday": "fri",
+      "categories": [
+        "plastic"
+      ]
+    },
+    {
+      "date": "2025-12-20",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2025-12-21",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2025-12-22",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-23",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2025-12-24",
+      "weekday": "wed",
+      "categories": []
+    },
+    {
+      "date": "2025-12-25",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-26",
+      "weekday": "fri",
+      "categories": [
+        "plastic"
+      ],
+      "notes": [
+        "クリーンセンターへの直接搬入は本日で終了"
+      ]
+    },
+    {
+      "date": "2025-12-27",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2025-12-28",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2025-12-29",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2025-12-30",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2025-12-31",
+      "weekday": "wed",
+      "categories": []
+    },
+    {
+      "date": "2026-01-01",
+      "weekday": "thu",
+      "holiday": "元日",
+      "categories": []
+    },
+    {
+      "date": "2026-01-02",
+      "weekday": "fri",
+      "categories": []
+    },
+    {
+      "date": "2026-01-03",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-01-04",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-01-05",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-01-06",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-01-07",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-01-08",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-01-09",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-01-10",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-01-11",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-01-12",
+      "weekday": "mon",
+      "holiday": "成人の日",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-01-13",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-01-14",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-01-15",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-01-16",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-01-17",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-01-18",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-01-19",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-01-20",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-01-21",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-01-22",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-01-23",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-01-24",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-01-25",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-01-26",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-01-27",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-01-28",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-01-29",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-01-30",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-01-31",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-02-01",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-02-02",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-02-03",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-02-04",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-02-05",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-02-06",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-02-07",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-02-08",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-02-09",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-02-10",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-02-11",
+      "weekday": "wed",
+      "holiday": "建国記念の日",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-02-12",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-02-13",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-02-14",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-02-15",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-02-16",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-02-17",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-02-18",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-02-19",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-02-20",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-02-21",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-02-22",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-02-23",
+      "weekday": "mon",
+      "holiday": "天皇誕生日",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-02-24",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-02-25",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-02-26",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-02-27",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-02-28",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-03-01",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-03-02",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-03-03",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-03-04",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-03-05",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-03-06",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-03-07",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-03-08",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-03-09",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-03-10",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-03-11",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-03-12",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-03-13",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-03-14",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-03-15",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-03-16",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-03-17",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-03-18",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-03-19",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-03-20",
+      "weekday": "fri",
+      "holiday": "春分の日",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-03-21",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-03-22",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-03-23",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-03-24",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-03-25",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-03-26",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-03-27",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-03-28",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-03-29",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-03-30",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-03-31",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-04-01",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-04-02",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-04-03",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-04-04",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-04-05",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-04-06",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-04-07",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-04-08",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-04-09",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-04-10",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-04-11",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-04-12",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-04-13",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-04-14",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-04-15",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-04-16",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-04-17",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-04-18",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-04-19",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-04-20",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-04-21",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-04-22",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-04-23",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-04-24",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-04-25",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-04-26",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-04-27",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-04-28",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-04-29",
+      "weekday": "wed",
+      "holiday": "昭和の日",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-04-30",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-05-01",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-05-02",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-05-03",
+      "weekday": "sun",
+      "holiday": "憲法記念日",
+      "categories": []
+    },
+    {
+      "date": "2026-05-04",
+      "weekday": "mon",
+      "holiday": "みどりの日",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-05-05",
+      "weekday": "tue",
+      "holiday": "こどもの日",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-05-06",
+      "weekday": "wed",
+      "holiday": "振替休日",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-05-07",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-05-08",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-05-09",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-05-10",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-05-11",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-05-12",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-05-13",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-05-14",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-05-15",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-05-16",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-05-17",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-05-18",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-05-19",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-05-20",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-05-21",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-05-22",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-05-23",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-05-24",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-05-25",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-05-26",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-05-27",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-05-28",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-05-29",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-05-30",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-05-31",
+      "weekday": "sun",
+      "categories": [],
+      "notes": [
+        "市内一斉清掃"
+      ]
+    },
+    {
+      "date": "2026-06-01",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-06-02",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-06-03",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-06-04",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-06-05",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-06-06",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-06-07",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-06-08",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-06-09",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-06-10",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-06-11",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-06-12",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-06-13",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-06-14",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-06-15",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-06-16",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-06-19",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-06-20",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-06-21",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-06-22",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-06-23",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-06-24",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-06-25",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-06-27",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-06-28",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-06-29",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-06-30",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-07-01",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-07-02",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-07-03",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-07-04",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-07-05",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-07-06",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-07-07",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-07-08",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-07-09",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-07-10",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-07-11",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-07-12",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-07-13",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-07-14",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-07-15",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-07-16",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-07-18",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-07-19",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-07-20",
+      "weekday": "mon",
+      "holiday": "海の日",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-07-21",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-07-22",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-07-23",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-07-24",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-07-25",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-07-26",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-07-27",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-07-28",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-07-29",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-07-30",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-07-31",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-08-01",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-08-02",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-08-03",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-08-04",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-08-05",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-08-06",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-08-07",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-08-08",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-08-09",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-08-10",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-08-11",
+      "weekday": "tue",
+      "holiday": "山の日",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-08-12",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-08-13",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-08-14",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-08-15",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-08-16",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-08-17",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-08-18",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-08-19",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-08-20",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-08-21",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-08-22",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-08-23",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-08-24",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-08-26",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-08-27",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-08-28",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-08-29",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-08-30",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-08-31",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-09-01",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-09-02",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-09-06",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-09-07",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-09-08",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-09-09",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-09-10",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-09-11",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-09-12",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-09-13",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-09-14",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-09-15",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-09-16",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-09-17",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-09-18",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-09-19",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-09-20",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-09-21",
+      "weekday": "mon",
+      "holiday": "敬老の日",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-09-22",
+      "weekday": "tue",
+      "holiday": "国民の休日",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-09-23",
+      "weekday": "wed",
+      "holiday": "秋分の日",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-09-24",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-09-25",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-09-26",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-09-27",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-09-28",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-09-29",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-09-30",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-10-01",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-10-02",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-10-03",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-10-04",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-10-05",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-10-06",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-10-07",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-10-08",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-10-09",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-10-10",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-10-11",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-10-12",
+      "weekday": "mon",
+      "holiday": "スポーツの日",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-10-13",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-10-14",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-10-15",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-10-16",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-10-17",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-10-18",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-10-19",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-10-20",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-10-21",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-10-22",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-10-23",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-10-24",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-10-25",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-10-26",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-10-28",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-10-31",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-11-01",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-11-02",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-11-03",
+      "weekday": "tue",
+      "holiday": "文化の日",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-11-07",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-11-08",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-11-09",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-11-11",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-11-13",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-11-14",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-11-15",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-11-16",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-11-17",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-11-18",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-11-19",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-11-20",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-11-21",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-11-22",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-11-23",
+      "weekday": "mon",
+      "holiday": "勤労感謝の日",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-11-24",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-11-25",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-11-26",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-11-27",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-11-28",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-11-29",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-11-30",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-12-01",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "weekday": "wed",
+      "categories": [
+        "small_appliance"
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-12-04",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-12-06",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-12-07",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-12-09",
+      "weekday": "wed",
+      "categories": [
+        "pet_bottle"
+      ]
+    },
+    {
+      "date": "2026-12-10",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-12-11",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-12-12",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-12-13",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-12-14",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ]
+    },
+    {
+      "date": "2026-12-15",
+      "weekday": "tue",
+      "categories": [
+        "magazine"
+      ]
+    },
+    {
+      "date": "2026-12-16",
+      "weekday": "wed",
+      "categories": [
+        "newspaper"
+      ]
+    },
+    {
+      "date": "2026-12-17",
+      "weekday": "thu",
+      "categories": [
+        "burnable",
+        "paper_pack",
+        "cloth"
+      ]
+    },
+    {
+      "date": "2026-12-18",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous",
+        "bottle",
+        "can"
+      ]
+    },
+    {
+      "date": "2026-12-19",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-12-20",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-12-21",
+      "weekday": "mon",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-12-22",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-12-23",
+      "weekday": "wed",
+      "categories": [
+        "nonburnable"
+      ]
+    },
+    {
+      "date": "2026-12-24",
+      "weekday": "thu",
+      "categories": [
+        "burnable"
+      ]
+    },
+    {
+      "date": "2026-12-25",
+      "weekday": "fri",
+      "categories": [
+        "plastic",
+        "hazardous"
+      ]
+    },
+    {
+      "date": "2026-12-26",
+      "weekday": "sat",
+      "categories": []
+    },
+    {
+      "date": "2026-12-27",
+      "weekday": "sun",
+      "categories": []
+    },
+    {
+      "date": "2026-12-28",
+      "weekday": "mon",
+      "categories": [
+        "burnable",
+        "cardboard"
+      ],
+      "notes": [
+        "クリーンセンターへの直接搬入は本日で終了(P.32参照)"
+      ]
+    },
+    {
+      "date": "2026-12-29",
+      "weekday": "tue",
+      "categories": []
+    },
+    {
+      "date": "2026-12-30",
+      "weekday": "wed",
+      "categories": []
+    },
+    {
+      "date": "2026-12-31",
+      "weekday": "thu",
+      "categories": []
+    }
+  ],
+  "by_category": {
+    "burnable": [
+      "2025-12-01",
+      "2025-12-04",
+      "2025-12-08",
+      "2025-12-11",
+      "2025-12-15",
+      "2025-12-18",
+      "2025-12-22",
+      "2025-12-25",
+      "2025-12-29",
+      "2026-01-05",
+      "2026-01-08",
+      "2026-01-12",
+      "2026-01-15",
+      "2026-01-19",
+      "2026-01-22",
+      "2026-01-26",
+      "2026-01-29",
+      "2026-02-02",
+      "2026-02-05",
+      "2026-02-09",
+      "2026-02-12",
+      "2026-02-16",
+      "2026-02-19",
+      "2026-02-23",
+      "2026-02-26",
+      "2026-03-02",
+      "2026-03-05",
+      "2026-03-09",
+      "2026-03-12",
+      "2026-03-16",
+      "2026-03-19",
+      "2026-03-23",
+      "2026-03-26",
+      "2026-03-30",
+      "2026-04-02",
+      "2026-04-06",
+      "2026-04-09",
+      "2026-04-13",
+      "2026-04-16",
+      "2026-04-20",
+      "2026-04-23",
+      "2026-04-27",
+      "2026-04-30",
+      "2026-05-04",
+      "2026-05-07",
+      "2026-05-11",
+      "2026-05-14",
+      "2026-05-18",
+      "2026-05-21",
+      "2026-05-25",
+      "2026-05-28",
+      "2026-06-01",
+      "2026-06-04",
+      "2026-06-08",
+      "2026-06-11",
+      "2026-06-15",
+      "2026-06-18",
+      "2026-06-22",
+      "2026-06-25",
+      "2026-06-29",
+      "2026-07-02",
+      "2026-07-06",
+      "2026-07-09",
+      "2026-07-13",
+      "2026-07-16",
+      "2026-07-20",
+      "2026-07-23",
+      "2026-07-27",
+      "2026-07-30",
+      "2026-08-03",
+      "2026-08-06",
+      "2026-08-10",
+      "2026-08-13",
+      "2026-08-17",
+      "2026-08-20",
+      "2026-08-24",
+      "2026-08-27",
+      "2026-08-31",
+      "2026-09-03",
+      "2026-09-07",
+      "2026-09-10",
+      "2026-09-14",
+      "2026-09-17",
+      "2026-09-21",
+      "2026-09-24",
+      "2026-09-28",
+      "2026-10-01",
+      "2026-10-05",
+      "2026-10-08",
+      "2026-10-12",
+      "2026-10-15",
+      "2026-10-19",
+      "2026-10-22",
+      "2026-10-26",
+      "2026-10-29",
+      "2026-11-02",
+      "2026-11-05",
+      "2026-11-09",
+      "2026-11-12",
+      "2026-11-16",
+      "2026-11-19",
+      "2026-11-23",
+      "2026-11-26",
+      "2026-11-30",
+      "2026-12-03",
+      "2026-12-07",
+      "2026-12-10",
+      "2026-12-14",
+      "2026-12-17",
+      "2026-12-21",
+      "2026-12-24",
+      "2026-12-28"
+    ],
+    "nonburnable": [
+      "2025-12-17",
+      "2026-01-21",
+      "2026-02-18",
+      "2026-03-18",
+      "2026-04-15",
+      "2026-05-13",
+      "2026-06-10",
+      "2026-07-08",
+      "2026-08-05",
+      "2026-09-02",
+      "2026-09-30",
+      "2026-10-28",
+      "2026-11-25",
+      "2026-12-23"
+    ],
+    "plastic": [
+      "2025-12-05",
+      "2025-12-12",
+      "2025-12-19",
+      "2025-12-26",
+      "2026-01-09",
+      "2026-01-16",
+      "2026-01-23",
+      "2026-01-30",
+      "2026-02-06",
+      "2026-02-13",
+      "2026-02-20",
+      "2026-02-27",
+      "2026-03-06",
+      "2026-03-13",
+      "2026-03-20",
+      "2026-03-27",
+      "2026-04-03",
+      "2026-04-10",
+      "2026-04-17",
+      "2026-04-24",
+      "2026-05-01",
+      "2026-05-08",
+      "2026-05-15",
+      "2026-05-22",
+      "2026-05-29",
+      "2026-06-05",
+      "2026-06-12",
+      "2026-06-19",
+      "2026-06-26",
+      "2026-07-03",
+      "2026-07-10",
+      "2026-07-17",
+      "2026-07-24",
+      "2026-07-31",
+      "2026-08-07",
+      "2026-08-14",
+      "2026-08-21",
+      "2026-08-28",
+      "2026-09-04",
+      "2026-09-11",
+      "2026-09-18",
+      "2026-09-25",
+      "2026-10-02",
+      "2026-10-09",
+      "2026-10-16",
+      "2026-10-23",
+      "2026-10-30",
+      "2026-11-06",
+      "2026-11-13",
+      "2026-11-20",
+      "2026-11-27",
+      "2026-12-04",
+      "2026-12-11",
+      "2026-12-18",
+      "2026-12-25"
+    ],
+    "hazardous": [
+      "2026-01-09",
+      "2026-01-16",
+      "2026-01-23",
+      "2026-01-30",
+      "2026-02-06",
+      "2026-02-13",
+      "2026-02-20",
+      "2026-02-27",
+      "2026-03-06",
+      "2026-03-13",
+      "2026-03-20",
+      "2026-03-27",
+      "2026-04-03",
+      "2026-04-10",
+      "2026-04-17",
+      "2026-04-24",
+      "2026-05-01",
+      "2026-05-08",
+      "2026-05-15",
+      "2026-05-22",
+      "2026-05-29",
+      "2026-06-05",
+      "2026-06-12",
+      "2026-06-19",
+      "2026-06-26",
+      "2026-07-03",
+      "2026-07-10",
+      "2026-07-17",
+      "2026-07-24",
+      "2026-07-31",
+      "2026-08-07",
+      "2026-08-14",
+      "2026-08-21",
+      "2026-08-28",
+      "2026-09-04",
+      "2026-09-11",
+      "2026-09-18",
+      "2026-09-25",
+      "2026-10-02",
+      "2026-10-09",
+      "2026-10-16",
+      "2026-10-23",
+      "2026-10-30",
+      "2026-11-06",
+      "2026-11-13",
+      "2026-11-20",
+      "2026-11-27",
+      "2026-12-04",
+      "2026-12-11",
+      "2026-12-18",
+      "2026-12-25"
+    ],
+    "bottle": [
+      "2026-01-16",
+      "2026-01-30",
+      "2026-02-13",
+      "2026-02-27",
+      "2026-03-13",
+      "2026-03-27",
+      "2026-04-10",
+      "2026-04-24",
+      "2026-05-08",
+      "2026-05-22",
+      "2026-06-05",
+      "2026-06-19",
+      "2026-07-03",
+      "2026-07-17",
+      "2026-07-31",
+      "2026-08-14",
+      "2026-08-28",
+      "2026-09-11",
+      "2026-09-25",
+      "2026-10-09",
+      "2026-10-23",
+      "2026-11-06",
+      "2026-11-20",
+      "2026-12-04",
+      "2026-12-18"
+    ],
+    "can": [
+      "2026-01-16",
+      "2026-01-30",
+      "2026-02-13",
+      "2026-02-27",
+      "2026-03-13",
+      "2026-03-27",
+      "2026-04-10",
+      "2026-04-24",
+      "2026-05-08",
+      "2026-05-22",
+      "2026-06-05",
+      "2026-06-19",
+      "2026-07-03",
+      "2026-07-17",
+      "2026-07-31",
+      "2026-08-14",
+      "2026-08-28",
+      "2026-09-11",
+      "2026-09-25",
+      "2026-10-09",
+      "2026-10-23",
+      "2026-11-06",
+      "2026-11-20",
+      "2026-12-04",
+      "2026-12-18"
+    ],
+    "pet_bottle": [
+      "2026-01-07",
+      "2026-02-04",
+      "2026-03-04",
+      "2026-04-01",
+      "2026-04-29",
+      "2026-05-27",
+      "2026-06-24",
+      "2026-07-22",
+      "2026-08-19",
+      "2026-09-16",
+      "2026-10-14",
+      "2026-11-11",
+      "2026-12-09"
+    ],
+    "newspaper": [
+      "2026-01-14",
+      "2026-02-11",
+      "2026-03-11",
+      "2026-04-08",
+      "2026-05-06",
+      "2026-06-03",
+      "2026-07-01",
+      "2026-07-29",
+      "2026-08-26",
+      "2026-09-23",
+      "2026-10-21",
+      "2026-11-18",
+      "2026-12-16"
+    ],
+    "magazine": [
+      "2026-01-13",
+      "2026-01-27",
+      "2026-02-10",
+      "2026-02-24",
+      "2026-03-10",
+      "2026-03-24",
+      "2026-04-07",
+      "2026-04-21",
+      "2026-05-05",
+      "2026-05-19",
+      "2026-06-02",
+      "2026-06-16",
+      "2026-06-30",
+      "2026-07-14",
+      "2026-07-28",
+      "2026-08-11",
+      "2026-08-25",
+      "2026-09-08",
+      "2026-09-22",
+      "2026-10-06",
+      "2026-10-20",
+      "2026-11-03",
+      "2026-11-17",
+      "2026-12-01",
+      "2026-12-15"
+    ],
+    "cardboard": [
+      "2026-01-12",
+      "2026-01-26",
+      "2026-02-09",
+      "2026-02-23",
+      "2026-03-09",
+      "2026-03-23",
+      "2026-04-06",
+      "2026-04-20",
+      "2026-05-04",
+      "2026-05-18",
+      "2026-06-01",
+      "2026-06-15",
+      "2026-06-29",
+      "2026-07-13",
+      "2026-07-27",
+      "2026-08-10",
+      "2026-08-24",
+      "2026-09-07",
+      "2026-09-21",
+      "2026-10-05",
+      "2026-10-19",
+      "2026-11-02",
+      "2026-11-16",
+      "2026-11-30",
+      "2026-12-14",
+      "2026-12-28"
+    ],
+    "paper_pack": [
+      "2026-01-15",
+      "2026-01-29",
+      "2026-02-12",
+      "2026-02-26",
+      "2026-03-12",
+      "2026-03-26",
+      "2026-04-09",
+      "2026-04-23",
+      "2026-05-07",
+      "2026-05-21",
+      "2026-06-04",
+      "2026-06-18",
+      "2026-07-02",
+      "2026-07-16",
+      "2026-07-30",
+      "2026-08-13",
+      "2026-08-27",
+      "2026-09-10",
+      "2026-09-24",
+      "2026-10-08",
+      "2026-10-22",
+      "2026-11-05",
+      "2026-11-19",
+      "2026-12-03",
+      "2026-12-17"
+    ],
+    "cloth": [
+      "2026-01-15",
+      "2026-01-29",
+      "2026-02-12",
+      "2026-02-26",
+      "2026-03-12",
+      "2026-03-26",
+      "2026-04-09",
+      "2026-04-23",
+      "2026-05-07",
+      "2026-05-21",
+      "2026-06-04",
+      "2026-06-18",
+      "2026-07-02",
+      "2026-07-16",
+      "2026-07-30",
+      "2026-08-13",
+      "2026-08-27",
+      "2026-09-10",
+      "2026-09-24",
+      "2026-10-08",
+      "2026-10-22",
+      "2026-11-05",
+      "2026-11-19",
+      "2026-12-03",
+      "2026-12-17"
+    ],
+    "small_appliance": [
+      "2026-01-28",
+      "2026-02-25",
+      "2026-03-25",
+      "2026-04-22",
+      "2026-05-20",
+      "2026-06-17",
+      "2026-07-15",
+      "2026-08-12",
+      "2026-09-09",
+      "2026-10-07",
+      "2026-11-04",
+      "2026-12-02"
+    ]
+  }
+}
