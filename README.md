@@ -1,8 +1,10 @@
-# hino-gomi
+# hino
 
 東京都日野市の「ごみ・資源分別カレンダー」を、地区ごとの **iCalendar（.ics）** として
 配布する静的サイトです。データは [hino-gomi-py](../hino-gomi-py) が PDF から変換したものを
 `public/<西暦>/` に置いて使います。
+
+公開先: https://gomicalendar.github.io/hino/
 
 - 購読（URL 登録）とダウンロードの両方に対応
 - ダウンロード時にリマインダー（前日 20:00 など）をブラウザ側で差し込める
@@ -100,7 +102,7 @@ public/
 
 `.github/workflows/deploy.yml` が `main` への push でビルドして Pages に公開します。
 `base` はリポジトリ名から決めるため（`BASE_PATH=/<repo>/`）、リポジトリ名を変えても
-そのまま動きます。ローカルの既定値は `vite.config.ts` の `/hino-gomi/` です。
+そのまま動きます。ローカルの既定値は `vite.config.ts` の `/hino/` です。
 
 リポジトリ設定の **Settings → Pages → Source** を `GitHub Actions` にしてください。
 
