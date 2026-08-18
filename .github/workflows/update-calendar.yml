@@ -1,0 +1,134 @@
+name: カレンダーデータの更新
+
+# hino-gomi-dl が取得した PDF を hino-gomi-py で変換し、public/<西暦>/ を更新する。
+#
+# hino-gomi-dl の download.yml が 20:17 UTC に走って最大 30 分かかるので、
+# その後の 21:30 UTC（06:30 JST）に見に行く。
+#
+# 走るかどうかは日付ではなく入力の指紋（PDF の sha256 と変換スクリプトの sha256）で
+# 決める。平常時は manifest.json 数 KB を読むだけで終わり、PDF は取りに行かない。
+# 数日実行できなかった日があっても、次に動いたときに正しく再生成される。
+on:
+  schedule:
+    - cron: '30 21 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '指紋が一致していても再生成する（--force）'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+# 前の実行が走っている間は待つ。push が衝突しない
+concurrency:
+  group: hino-calendar
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    outputs:
+      # push した場合だけ値が入る。deploy を呼ぶかどうかの判定に使う
+      sha: ${{ steps.push.outputs.sha }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/checkout@v4
+        with:
+          repository: gomicalendar/hino-gomi-py
+          path: .work/hino-gomi-py
+
+      # PDF は 1 ファイル 26MB × 10。blob:none の部分クローンにして
+      # manifest.json だけを展開する。PDF は必要になった版だけ後から取る
+      - uses: actions/checkout@v4
+        with:
+          repository: gomicalendar/hino-gomi-dl
+          path: .work/hino-gomi-dl
+          filter: blob:none
+          sparse-checkout: data/*/manifest.json
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # 差分が無ければここで終わり。以降は全部 skip される
+      - name: 更新の有無を判定
+        id: check
+        run: |
+          python scripts/sync-calendar.py \
+            --data .work/hino-gomi-dl/data \
+            --converter .work/hino-gomi-py \
+            --check ${{ inputs.force && '--force' || '' }} \
+            | tee -a "$GITHUB_STEP_SUMMARY"
+
+      - name: 対象の版の PDF を取得
+        if: steps.check.outputs.updated == 'true'
+        working-directory: .work/hino-gomi-dl
+        env:
+          # step output は run に直接展開せず環境変数越しに渡す
+          EDITIONS: ${{ steps.check.outputs.editions }}
+        run: |
+          set -euo pipefail
+          patterns=('data/*/manifest.json')
+          for edition in $EDITIONS; do patterns+=("data/$edition/*.pdf"); done
+          git sparse-checkout set --no-cone "${patterns[@]}"
+          du -sh data
+
+      - name: 依存関係
+        if: steps.check.outputs.updated == 'true'
+        run: pip install -r .work/hino-gomi-py/requirements.txt
+
+      - name: 変換
+        if: steps.check.outputs.updated == 'true'
+        run: |
+          set -o pipefail
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          python scripts/sync-calendar.py \
+            --data .work/hino-gomi-dl/data \
+            --converter .work/hino-gomi-py \
+            ${{ inputs.force && '--force' || '' }} \
+            2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      # ICS の DTSTAMP は毎回変わるので、変換すればほぼ必ず差分は出る。
+      # ここの空チェックは --force を空振りさせたときのための保険
+      - name: commit & push
+        id: push
+        if: steps.check.outputs.updated == 'true'
+        run: |
+          set -euo pipefail
+          git add -A -- public .github/state
+          if git diff --cached --quiet; then
+            echo '出力に変更なし（push しませんでした）' >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "public: ごみカレンダーを更新" \
+                     -m "$(git diff --cached --name-status)"
+          git push
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          {
+            echo "### push しました"
+            echo '```'
+            git show --stat --oneline HEAD | tail -n +2
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  # GITHUB_TOKEN での push は push イベントを発火しないので、
+  # deploy.yml は自動では走らない。ここから明示的に呼ぶ
+  deploy:
+    needs: generate
+    if: needs.generate.outputs.sha != ''
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.generate.outputs.sha }}
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

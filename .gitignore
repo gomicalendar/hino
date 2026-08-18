@@ -16,6 +16,9 @@ dist-ssr
 public/list.json
 public/latest/
 
+# update-calendar.yml が hino-gomi-dl / hino-gomi-py を展開する場所
+.work/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

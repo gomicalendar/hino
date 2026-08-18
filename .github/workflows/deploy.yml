@@ -3,6 +3,14 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches: [main]
+  # update-calendar.yml から呼ぶ。GITHUB_TOKEN での push は push イベントを
+  # 発火しないので、データ更新のあとは向こうから明示的に叩いてもらう
+  workflow_call:
+    inputs:
+      ref:
+        description: 'チェックアウトする ref（省略時はこの実行を起こした commit）'
+        type: string
+        default: ''
   workflow_dispatch:
 
 permissions:
@@ -20,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
       - uses: actions/setup-node@v4
         with:
           node-version: 22

@@ -1,0 +1,18 @@
+{
+  "editions": {
+    "r8": {
+      "r8.higashihirayama.pdf": "7bcc7a91219456de028f882aee3e1219faaf836556a9c8158c24b6c6c0ed6ba8",
+      "r8.hinohonmachi.pdf": "0404b5464f7f7e9cf638a54ed87c62699f6077c4301e69fd4ca72e12037e289c",
+      "r8.hirayama.pdf": "34299de5efd276c0ddfe8edacf3a99752243a81646b9e2907507daf5af80ee67",
+      "r8.kamida.pdf": "98f6431108bca47cd3a8ad9207910b0d56b9c9a0865393f53c270f5386b6b4e0",
+      "r8.minamidaira.pdf": "cfb0050f56712268969726828d54436c690fb55162742126f6a7c182919e664f",
+      "r8.mogusa.pdf": "26984eb09de9d3fe042e1b0385890913409c0276b3be6766f66b0785a5ec7a83",
+      "r8.ochikawa.pdf": "136762455bcff3d6d9cdaaf9005709f8dd350dd7b6722d006b9cbfae78cb9002",
+      "r8.osakaue.pdf": "17ce5761755390c04e961885b8fe0726810b2b3ff962231ead1e94d3c42b6ee8",
+      "r8.tamadaira.pdf": "ad653daab397ca7baa5131ed26f26e73e799cf5d9d5a891e8d06f747ae79eae5",
+      "r8.toyoda.pdf": "78c833f9f95dba032e119c43baed8bf00f451f90269d0487c5b7d5fc05eadbcf"
+    }
+  },
+  "converter": "f27134d311c1c9fdba536420ccaae229a2f6eae9f6cdc436658ab28fce77f323",
+  "generated_at": "2026-08-18T02:43:51+00:00"
+}

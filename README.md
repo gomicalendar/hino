@@ -27,6 +27,13 @@ npm run lint
 
 ## データを追加する（年度更新）
 
+通常は自動です。`.github/workflows/update-calendar.yml` が毎日 06:30 JST に
+[hino-gomi-dl](https://github.com/gomicalendar/hino-gomi-dl) の PDF を見に行き、
+更新があれば [hino-gomi-py](https://github.com/gomicalendar/hino-gomi-py) で変換して
+`public/<西暦>/` を commit し、そのまま Pages に反映します。→ [自動更新](#自動更新)
+
+手で入れる場合：
+
 1. [hino-gomi-py](../hino-gomi-py) で新しい年度の PDF を変換する
 2. 出力を `public/2027/` のようにコピーする（`<地区>.json` と `<地区>.ics`）
 3. `npm run build`（または `npm run dev`）を実行する
@@ -105,6 +112,42 @@ public/
 そのまま動きます。ローカルの既定値は `vite.config.ts` の `/hino/` です。
 
 リポジトリ設定の **Settings → Pages → Source** を `GitHub Actions` にしてください。
+
+## 自動更新
+
+`.github/workflows/update-calendar.yml` が毎日 21:30 UTC（06:30 JST）に走ります。
+hino-gomi-dl の `download.yml` が 20:17 UTC 開始・最大 30 分なので、その後です。
+
+走るかどうかは**日付ではなく入力の指紋**で決めます。`scripts/sync-calendar.py` が
+hino-gomi-dl の `data/<版>/manifest.json` にある PDF の sha256 と、hino-gomi-py の
+`hino_gomi.py` の sha256 を集めて、前回の記録（`.github/state/source.json`）と比べます。
+
+| 状況 | 挙動 |
+|---|---|
+| PDF も変換スクリプトも同じ | 何もしない（manifest 数 KB を読むだけ、PDF は取りに行かない） |
+| PDF が更新された | その版だけ再変換 |
+| 新しい版（`r9`）が現れた | その版だけ変換し、`public/2027/` が増える |
+| 変換ロジックを直した | PDF が同じでも全版を再生成 |
+| 同じ PDF を再取得しただけ | 何もしない（manifest の日時は指紋に含めない） |
+| 数日ジョブが動かなかった | 次に動いたときに正しく再生成される |
+
+コミット日時で判定していないので、GitHub 障害などで実行が飛んでも取りこぼしません。
+
+```
+.github/state/source.json   ← 前回どの入力から生成したかの記録。git log がそのまま実行ログになる
+```
+
+手動で叩くときは Actions から **カレンダーデータの更新** を実行します
+（`force` を付けると指紋が一致していても再生成）。ローカルでも同じスクリプトが動きます。
+
+```
+python scripts/sync-calendar.py --data ../hino-gomi-dl/data --converter ../hino-gomi-py
+```
+
+`--check` を付けると判定だけして生成しません。
+
+`GITHUB_TOKEN` による push は `push` イベントを発火しない（GitHub の無限ループ防止）ため、
+deploy.yml は自動では走りません。`workflow_call` で update-calendar.yml から明示的に呼びます。
 
 ## 構成
 
