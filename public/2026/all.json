@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "municipality": "東京都日野市",
   "edition": {
-    "era": "令和8年度",
+    "era": "令和8年",
     "year": 2026
   },
   "categories": [
@@ -94,14 +94,14 @@
         "name": "東平山・旭が丘・富士町"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.higashihirayama.pdf",
         "sha256": "7bcc7a91219456de028f882aee3e1219faaf836556a9c8158c24b6c6c0ed6ba8",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:05+00:00"
+        "converted_at": "2026-08-18T13:49:51+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -3397,14 +3397,14 @@
         "name": "日野本町・日野"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.hinohonmachi.pdf",
         "sha256": "0404b5464f7f7e9cf638a54ed87c62699f6077c4301e69fd4ca72e12037e289c",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:08+00:00"
+        "converted_at": "2026-08-18T13:49:54+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -6691,14 +6691,14 @@
         "name": "平山・西平山"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.hirayama.pdf",
         "sha256": "34299de5efd276c0ddfe8edacf3a99752243a81646b9e2907507daf5af80ee67",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:11+00:00"
+        "converted_at": "2026-08-18T13:49:57+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -9992,14 +9992,14 @@
         "name": "上田・宮・万願寺・石田・新井"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.kamida.pdf",
         "sha256": "98f6431108bca47cd3a8ad9207910b0d56b9c9a0865393f53c270f5386b6b4e0",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:14+00:00"
+        "converted_at": "2026-08-18T13:50:00+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -13257,14 +13257,14 @@
         "name": "南平"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.minamidaira.pdf",
         "sha256": "cfb0050f56712268969726828d54436c690fb55162742126f6a7c182919e664f",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:17+00:00"
+        "converted_at": "2026-08-18T13:50:03+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -16565,14 +16565,14 @@
         "name": "百草・程久保"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.mogusa.pdf",
         "sha256": "26984eb09de9d3fe042e1b0385890913409c0276b3be6766f66b0785a5ec7a83",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:20+00:00"
+        "converted_at": "2026-08-18T13:50:06+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -19873,14 +19873,14 @@
         "name": "落川・三沢・高幡"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.ochikawa.pdf",
         "sha256": "136762455bcff3d6d9cdaaf9005709f8dd350dd7b6722d006b9cbfae78cb9002",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:23+00:00"
+        "converted_at": "2026-08-18T13:50:09+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -23150,14 +23150,14 @@
         "name": "大坂上・日野台・新町・栄町"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.osakaue.pdf",
         "sha256": "17ce5761755390c04e961885b8fe0726810b2b3ff962231ead1e94d3c42b6ee8",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:25+00:00"
+        "converted_at": "2026-08-18T13:50:11+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -26444,14 +26444,14 @@
         "name": "多摩平"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.tamadaira.pdf",
         "sha256": "ad653daab397ca7baa5131ed26f26e73e799cf5d9d5a891e8d06f747ae79eae5",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:28+00:00"
+        "converted_at": "2026-08-18T13:50:14+09:00"
       },
       "range": {
         "start": "2025-12-01",
@@ -29736,14 +29736,14 @@
         "name": "豊田・東豊田・川辺堀之内・神明"
       },
       "edition": {
-        "era": "令和8年度",
+        "era": "令和8年",
         "year": 2026
       },
       "source": {
         "file": "r8.toyoda.pdf",
         "sha256": "78c833f9f95dba032e119c43baed8bf00f451f90269d0487c5b7d5fc05eadbcf",
         "pages": 15,
-        "converted_at": "2026-08-18T02:55:31+00:00"
+        "converted_at": "2026-08-18T13:50:17+09:00"
       },
       "range": {
         "start": "2025-12-01",

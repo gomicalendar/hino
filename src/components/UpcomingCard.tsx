@@ -35,13 +35,13 @@ export default function UpcomingCard({ cal, today }: Props) {
           </Stack>
         ) : result.status === 'after' ? (
           <Alert severity="info">
-            この年度（{cal.range.start} 〜 {cal.range.end}）は終了しています。新しい年度を選んでください。
+            この年の版（{cal.range.start} 〜 {cal.range.end}）は終了しています。新しい年を選んでください。
           </Alert>
         ) : (
           <>
             {result.status === 'before' && (
               <Alert severity="info" sx={{ mb: 2 }}>
-                まだ開始前の年度です。{formatDate(cal.range.start)}からの収集日を表示しています。
+                まだ開始前の版です。{formatDate(cal.range.start)}からの収集日を表示しています。
               </Alert>
             )}
 

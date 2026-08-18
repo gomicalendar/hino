@@ -6,14 +6,14 @@
     "name": "上田・宮・万願寺・石田・新井"
   },
   "edition": {
-    "era": "令和8年度",
+    "era": "令和8年",
     "year": 2026
   },
   "source": {
     "file": "r8.kamida.pdf",
     "sha256": "98f6431108bca47cd3a8ad9207910b0d56b9c9a0865393f53c270f5386b6b4e0",
     "pages": 15,
-    "converted_at": "2026-08-18T02:55:14+00:00"
+    "converted_at": "2026-08-18T13:50:00+09:00"
   },
   "range": {
     "start": "2025-12-01",

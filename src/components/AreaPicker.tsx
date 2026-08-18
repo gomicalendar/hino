@@ -17,7 +17,7 @@ export default function AreaPicker({ catalog, year, areaId, onYearChange, onArea
     <Stack direction={{ xs: 'column', md: 'row' }} spacing={2}>
       <TextField
         select
-        label="年度"
+        label="年"
         value={year.year}
         onChange={(e) => onYearChange(Number(e.target.value))}
         sx={{ width: { xs: '100%', md: 260 }, flexShrink: 0 }}

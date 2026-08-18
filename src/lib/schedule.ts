@@ -3,8 +3,8 @@ import { daysBetween } from './format.ts'
 
 export type Upcoming = {
   /**
-   * in-range: 今日が収録期間内。before: まだ期間が始まっていない（先の年度を見ている）。
-   * after: 期間が終わっている（古い年度を見ている）。
+   * in-range: 今日が収録期間内。before: まだ期間が始まっていない（先の年を見ている）。
+   * after: 期間が終わっている（古い年を見ている）。
    */
   status: 'in-range' | 'before' | 'after'
   days: Day[]
@@ -23,7 +23,7 @@ export function resolveCategories(map: Map<string, Category>, ids: string[]): Ca
 
 /**
  * 今日以降 windowDays 日ぶんの収集日。
- * 期間外の年度を選んでいるときは、代わりに先頭（before）を返して空表示を避ける。
+ * 期間外の年を選んでいるときは、代わりに先頭（before）を返して空表示を避ける。
  */
 export function upcoming(cal: AreaCalendar, todayIso: string, windowDays = 14): Upcoming {
   const collections = cal.days.filter((d) => d.categories.length > 0)

@@ -6,14 +6,14 @@
     "name": "百草・程久保"
   },
   "edition": {
-    "era": "令和8年度",
+    "era": "令和8年",
     "year": 2026
   },
   "source": {
     "file": "r8.mogusa.pdf",
     "sha256": "26984eb09de9d3fe042e1b0385890913409c0276b3be6766f66b0785a5ec7a83",
     "pages": 15,
-    "converted_at": "2026-08-18T02:55:20+00:00"
+    "converted_at": "2026-08-18T13:50:06+09:00"
   },
   "range": {
     "start": "2025-12-01",

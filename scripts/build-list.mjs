@@ -77,10 +77,10 @@ async function readYear(year) {
 }
 
 /**
- * 最新年度の .ics を public/latest/ に複製する。
+ * 最新年の .ics を public/latest/ に複製する。
  *
- * 購読者に「年度が変わったら URL を貼り替えて」と言わずに済ませるため。
- * UID は日付＋地区 ID なので年をまたいでも一意で、配信内容が翌年度に入れ替わっても
+ * 購読者に「年が変わったら URL を貼り替えて」と言わずに済ませるため。
+ * UID は日付＋地区 ID なので年をまたいでも一意で、配信内容が翌年に入れ替わっても
  * カレンダー側は重複せず更新される。
  */
 async function writeLatestMirror(entry) {
@@ -122,4 +122,4 @@ console.log(
   `[OK] public/list.json  ${entries.length}年 / ` +
     entries.map((e) => `${e.year}:${e.areas.length}地区`).join(' '),
 )
-console.log(`[OK] public/latest/    ${entries[0].year}年度の .ics を ${entries[0].areas.length}件 複製`)
+console.log(`[OK] public/latest/    ${entries[0].year}年の .ics を ${entries[0].areas.length}件 複製`)

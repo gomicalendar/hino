@@ -6,14 +6,14 @@
     "name": "日野本町・日野"
   },
   "edition": {
-    "era": "令和8年度",
+    "era": "令和8年",
     "year": 2026
   },
   "source": {
     "file": "r8.hinohonmachi.pdf",
     "sha256": "0404b5464f7f7e9cf638a54ed87c62699f6077c4301e69fd4ca72e12037e289c",
     "pages": 15,
-    "converted_at": "2026-08-18T02:55:08+00:00"
+    "converted_at": "2026-08-18T13:49:54+09:00"
   },
   "range": {
     "start": "2025-12-01",

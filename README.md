@@ -25,7 +25,7 @@ npm run lint
 | `npm run list` | `public/<西暦>/` を走査して `public/list.json` と `public/latest/` を生成 |
 | `npm run dev` / `npm run build` | 上記を自動で先に実行する（`predev` / `prebuild`） |
 
-## データを追加する（年度更新）
+## データを追加する（年次更新）
 
 通常は自動です。`.github/workflows/update-calendar.yml` が毎日 06:30 JST に
 [hino-gomi-dl](https://github.com/gomicalendar/hino-gomi-dl) の PDF を見に行き、
@@ -34,11 +34,11 @@ npm run lint
 
 手で入れる場合：
 
-1. [hino-gomi-py](../hino-gomi-py) で新しい年度の PDF を変換する
+1. [hino-gomi-py](../hino-gomi-py) で新しい年の PDF を変換する
 2. 出力を `public/2027/` のようにコピーする（`<地区>.json` と `<地区>.ics`）
 3. `npm run build`（または `npm run dev`）を実行する
 
-`list.json` が作り直され、年度セレクトに追加されます。**コードの修正は不要です。**
+`list.json` が作り直され、年セレクトに追加されます。**コードの修正は不要です。**
 
 ```
 public/
@@ -54,7 +54,7 @@ public/
 
 ## 世代管理：`public/list.json`
 
-静的ホスティングにはディレクトリ一覧が無いため、「どの年度のデータが存在するか」を
+静的ホスティングにはディレクトリ一覧が無いため、「どの年のデータが存在するか」を
 アプリに伝える索引が必要です。年を決め打ちで探索する方法は脆く、TypeScript に
 書き込む方法は毎年コード修正が必要になるので、`scripts/build-list.mjs` が
 実ファイルから索引を生成しています。
@@ -71,7 +71,7 @@ public/
   "years": [
     {
       "year": 2026,
-      "era": "令和8年度",
+      "era": "令和8年",
       "range": { "start": "2025-12-01", "end": "2026-12-31" },
       "converted_at": "2026-08-17T16:32:54+09:00",
       "areas": [
@@ -90,19 +90,19 @@ public/
 }
 ```
 
-`years` は新しい年度が先。パスはすべて public ルートからの相対で、
+`years` は新しい年が先。パスはすべて public ルートからの相対で、
 サブパス配信でも壊れないようアプリ側で `import.meta.env.BASE_URL` を前置します。
 
 ### `public/latest/` と `subscribe`
 
-`.ics` は年度別のファイルなので、`2026/kamida.ics` を購読すると翌年度に URL を
-貼り替えてもらう必要が出てしまいます。これを避けるため、最新年度の `.ics` を
+`.ics` は年別のファイルなので、`2026/kamida.ics` を購読すると翌年に URL を
+貼り替えてもらう必要が出てしまいます。これを避けるため、最新年の `.ics` を
 `public/latest/<地区>.ics` に複製し、そこを購読 URL として案内しています。
 
-`UID` は `{日付}-{地区id}@hino-gomi` で年度をまたいでも一意なので、配信内容が
-翌年度のものに入れ替わってもイベントは重複せず、素直に更新されます。
+`UID` は `{日付}-{地区id}@hino-gomi` で年をまたいでも一意なので、配信内容が
+翌年のものに入れ替わってもイベントは重複せず、素直に更新されます。
 
-`subscribe` は最新年度の地区にだけ付きます。過去の年度を選んでいるときは
+`subscribe` は最新年の地区にだけ付きます。過去の年を選んでいるときは
 恒久 URL を案内できないので、アプリはその旨を表示します。
 
 ## デプロイ（GitHub Pages）
@@ -153,10 +153,10 @@ deploy.yml は自動では走りません。`workflow_call` で update-calendar.
 
 ```
 src/
-├── App.tsx                 選択状態（年度・地区）と読み込みの管理
+├── App.tsx                 選択状態（年・地区）と読み込みの管理
 ├── theme.ts                OS のダークモードに追従（colorSchemeSelector: 'media'）
 ├── components/
-│   ├── AreaPicker.tsx      年度・地区セレクト
+│   ├── AreaPicker.tsx      年・地区セレクト
 │   ├── SubscribeCard.tsx   購読 URL のコピーと各カレンダーへのリンク
 │   ├── DownloadCard.tsx    リマインダー選択と .ics のダウンロード
 │   └── UpcomingCard.tsx    直近 2 週間の収集日
@@ -167,7 +167,7 @@ src/
     └── format.ts           日付・容量の表示、品目の色
 ```
 
-選択した年度と地区は `?year=&area=` に反映されるので、URL の共有で地区を指定できます。
+選択した年と地区は `?year=&area=` に反映されるので、URL の共有で地区を指定できます。
 地区は `localStorage` にも保存して次回に復元します。
 
 ## 仕様上の注意

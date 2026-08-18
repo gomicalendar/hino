@@ -6,14 +6,14 @@
     "name": "平山・西平山"
   },
   "edition": {
-    "era": "令和8年度",
+    "era": "令和8年",
     "year": 2026
   },
   "source": {
     "file": "r8.hirayama.pdf",
     "sha256": "34299de5efd276c0ddfe8edacf3a99752243a81646b9e2907507daf5af80ee67",
     "pages": 15,
-    "converted_at": "2026-08-18T02:55:11+00:00"
+    "converted_at": "2026-08-18T13:49:57+09:00"
   },
   "range": {
     "start": "2025-12-01",

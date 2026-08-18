@@ -6,14 +6,14 @@
     "name": "東平山・旭が丘・富士町"
   },
   "edition": {
-    "era": "令和8年度",
+    "era": "令和8年",
     "year": 2026
   },
   "source": {
     "file": "r8.higashihirayama.pdf",
     "sha256": "7bcc7a91219456de028f882aee3e1219faaf836556a9c8158c24b6c6c0ed6ba8",
     "pages": 15,
-    "converted_at": "2026-08-18T02:55:05+00:00"
+    "converted_at": "2026-08-18T13:49:51+09:00"
   },
   "range": {
     "start": "2025-12-01",

@@ -71,7 +71,7 @@ function App() {
       .catch((e: unknown) => setError(e instanceof Error ? e.message : String(e)))
   }, [])
 
-  // 該当が無ければ最新年度・先頭の地区に落ちる（古い共有 URL でも壊れない）。
+  // 該当が無ければ最新年・先頭の地区に落ちる（古い共有 URL でも壊れない）。
   const year = catalog ? findYear(catalog, selection.year) : null
   const area = year ? findArea(year, selection.areaId) : null
 

@@ -21,7 +21,7 @@ type Props = { catalog: Catalog; year: ListYear; area: ListArea }
 export default function SubscribeCard({ catalog, year, area }: Props) {
   const [toast, setToast] = useState<string | null>(null)
 
-  // 最新年度なら latest/ 経由の恒久 URL、過去の年度ならその年度のファイルを直接指す。
+  // 最新年なら latest/ 経由の恒久 URL、過去の年ならその年のファイルを直接指す。
   const isLatest = year.year === catalog.latest
   const httpUrl = absoluteUrl(area.subscribe ?? area.ics)
   const url = webcalUrl(httpUrl)
@@ -44,7 +44,7 @@ export default function SubscribeCard({ catalog, year, area }: Props) {
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
           URL を登録しておくと、カレンダーアプリが定期的に読み直します。
-          {isLatest && ' この URL は年度が切り替わっても差し替え不要です。'}
+          {isLatest && ' この URL は年が切り替わっても差し替え不要です。'}
         </Typography>
 
         <TextField
@@ -90,8 +90,8 @@ export default function SubscribeCard({ catalog, year, area }: Props) {
 
         {!isLatest && (
           <Alert severity="info" sx={{ mt: 2 }}>
-            {year.year}年度ぶんだけの URL です。最新年度（{catalog.latest}
-            年度）を選ぶと、毎年使える URL になります。
+            {year.year}年ぶんだけの URL です。最新の年（{catalog.latest}
+            年）を選ぶと、毎年使える URL になります。
           </Alert>
         )}
 
