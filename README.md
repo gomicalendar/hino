@@ -34,7 +34,7 @@ npm run lint
 
 手で入れる場合：
 
-1. [hino-gomi-py](../hino-gomi-py) で新しい年の PDF を変換する
+1. [hino-gomi-py](https://github.com/gomicalendar/hino-gomi-py) で新しい年の PDF を変換する
 2. 出力を `public/2027/` のようにコピーする（`<地区>.json` と `<地区>.ics`）
 3. `npm run build`（または `npm run dev`）を実行する
 
