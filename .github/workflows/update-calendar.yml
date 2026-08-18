@@ -35,16 +35,16 @@ jobs:
       sha: ${{ steps.push.outputs.sha }}
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           repository: gomicalendar/hino-gomi-py
           path: .work/hino-gomi-py
 
       # PDF は 1 ファイル 26MB × 10。blob:none の部分クローンにして
       # manifest.json だけを展開する。PDF は必要になった版だけ後から取る
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           repository: gomicalendar/hino-gomi-dl
           path: .work/hino-gomi-dl
@@ -52,7 +52,7 @@ jobs:
           sparse-checkout: data/*/manifest.json
           sparse-checkout-cone-mode: false
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v7
         with:
           python-version: '3.12'
 
