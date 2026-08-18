@@ -1,7 +1,7 @@
 # hino
 
 東京都日野市の「ごみ・資源分別カレンダー」を、地区ごとの **iCalendar（.ics）** として
-配布する静的サイトです。データは [hino-gomi-py](../hino-gomi-py) が PDF から変換したものを
+配布する静的サイトです。データは [hino-gomi-py](https://github.com/gomicalendar/hino-gomi-py) が PDF から変換したものを
 `public/<西暦>/` に置いて使います。
 
 公開先: https://gomicalendar.github.io/hino/
