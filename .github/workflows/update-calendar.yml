@@ -8,6 +8,11 @@ name: カレンダーデータの更新
 # 走るかどうかは日付ではなく入力の指紋（PDF の sha256 と変換スクリプトの sha256）で
 # 決める。平常時は manifest.json 数 KB を読むだけで終わり、PDF は取りに行かない。
 # 数日実行できなかった日があっても、次に動いたときに正しく再生成される。
+#
+# ただし last-run.json（最終実行の記録）は毎回書き換えて push する。
+# スケジュール実行は 60 日コミットが無いと GitHub に無効化されるので、
+# 「変更なし」という結果そのものをコミットして時計を巻き戻す。
+# public が変わらない日は deploy を呼ばないので、Pages は無駄に配信し直さない。
 on:
   schedule:
     - cron: '30 21 * * *'
@@ -31,7 +36,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     outputs:
-      # push した場合だけ値が入る。deploy を呼ぶかどうかの判定に使う
+      # public が変わった日だけ値が入る。deploy を呼ぶかどうかの判定に使う
+      # （実行ログだけを push した日は空のまま）
       sha: ${{ steps.push.outputs.sha }}
 
     steps:
@@ -56,15 +62,21 @@ jobs:
         with:
           python-version: '3.12'
 
-      # 差分が無ければここで終わり。以降は全部 skip される
+      # 差分が無ければ変換以降は全部 skip される（実行ログの記録だけは走る）
       - name: 更新の有無を判定
         id: check
         run: |
+          set -o pipefail
+          # 最終行（「変更なし（…）」か「再生成します（…）: r8」）を実行ログに載せる
+          log="$RUNNER_TEMP/check.log"
+          rc=0
           python scripts/sync-calendar.py \
             --data .work/hino-gomi-dl/data \
             --converter .work/hino-gomi-py \
             --check ${{ inputs.force && '--force' || '' }} \
-            | tee -a "$GITHUB_STEP_SUMMARY"
+            2>&1 | tee -a "$log" "$GITHUB_STEP_SUMMARY" || rc=$?
+          echo "detail=$(tail -n 1 "$log" | tr -d '\r\n')" >> "$GITHUB_OUTPUT"
+          exit $rc
 
       - name: 対象の版の PDF を取得
         if: steps.check.outputs.updated == 'true'
@@ -84,39 +96,96 @@ jobs:
         run: pip install -r .work/hino-gomi-py/requirements.txt
 
       - name: 変換
+        id: build
         if: steps.check.outputs.updated == 'true'
         run: |
           set -o pipefail
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          log="$RUNNER_TEMP/build.log"
+          rc=0
           python scripts/sync-calendar.py \
             --data .work/hino-gomi-dl/data \
             --converter .work/hino-gomi-py \
             ${{ inputs.force && '--force' || '' }} \
-            2>&1 | tee -a "$GITHUB_STEP_SUMMARY"
-          echo '```' >> "$GITHUB_STEP_SUMMARY"
+            2>&1 | tee "$log" || rc=$?
+          {
+            echo '```'
+            cat "$log"
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          # 失敗していれば最終行がその原因。判定の一行より詳しいので優先して載せる
+          echo "detail=$(tail -n 1 "$log" | tr -d '\r\n')" >> "$GITHUB_OUTPUT"
+          exit $rc
 
-      # ICS の DTSTAMP は毎回変わるので、変換すればほぼ必ず差分は出る。
-      # ここの空チェックは --force を空振りさせたときのための保険
-      - name: commit & push
+      # 判定・変換の成否に関わらず走る。失敗した日に記録まで止まると、
+      # 故障と沈黙が重なって 60 日後にスケジュールごと無効化されてしまう
+      - name: 実行ログを書いて commit & push
         id: push
-        if: steps.check.outputs.updated == 'true'
+        if: always()
+        env:
+          STATUS: ${{ job.status }}
+          DETAIL: ${{ steps.build.outputs.detail || steps.check.outputs.detail }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
           set -euo pipefail
-          git add -A -- public .github/state
-          if git diff --cached --quiet; then
-            echo '出力に変更なし（push しませんでした）' >> "$GITHUB_STEP_SUMMARY"
-            exit 0
+          # ICS の DTSTAMP は毎回変わるので、変換すればほぼ必ず差分は出る。
+          # ここの空チェックは --force を空振りさせたときのための保険
+          changed=''
+          if [ "$STATUS" = 'success' ]; then
+            git add -A -- public .github/state
+            changed=$(git diff --cached --name-status -- public .github/state)
           fi
+
+          if [ "$STATUS" != 'success' ]; then
+            result=failed
+          elif [ -n "$changed" ]; then
+            result=updated
+          else
+            result=ok
+          fi
+
+          # JSON は python に組ませる。実行の最終行をそのまま入れられる
+          RESULT="$result" python - <<'PY'
+          import datetime as dt, json, os
+          from pathlib import Path
+
+          # いま公開している版。指紋ファイルが唯一の出どころ
+          state = Path(".github/state/source.json")
+          editions = sorted(json.loads(state.read_text(encoding="utf-8")).get("editions", {})) \
+              if state.is_file() else []
+
+          jst = dt.timezone(dt.timedelta(hours=9))
+          Path("last-run.json").write_text(json.dumps({
+              "run_at": dt.datetime.now(jst).replace(microsecond=0).isoformat(),
+              "result": os.environ["RESULT"],
+              "detail": os.environ.get("DETAIL", ""),
+              "editions": editions,
+              "run_url": os.environ["RUN_URL"],
+          }, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          PY
+
+          # run_at が毎回変わるので、ここは必ず 1 件以上の差分になる
+          git add -- last-run.json
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m "public: ごみカレンダーを更新" \
-                     -m "$(git diff --cached --name-status)"
-          git push
-          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          if [ -n "$changed" ]; then
+            git commit -m "public: ごみカレンダーを更新" -m "$changed"
+          elif [ -n "$DETAIL" ]; then
+            git commit -m "chore: 実行ログ（${result}）" -m "$DETAIL"
+          else
+            git commit -m "chore: 実行ログ（${result}）"
+          fi
+          # 毎日 push するので、人の push と鉢合わせても赤くしない
+          git push || { git pull --rebase && git push; }
+
+          # public が変わった日だけ deploy を呼ぶ。実行ログだけの日は配信し直さない
+          if [ -n "$changed" ]; then
+            echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+          fi
+
           {
-            echo "### push しました"
+            echo "### ${result}"
             echo '```'
-            git show --stat --oneline HEAD | tail -n +2
+            cat last-run.json
             echo '```'
           } >> "$GITHUB_STEP_SUMMARY"
 

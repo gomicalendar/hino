@@ -133,8 +133,12 @@ hino-gomi-dl の `data/<版>/manifest.json` にある PDF の sha256 と、hino-
 
 コミット日時で判定していないので、GitHub 障害などで実行が飛んでも取りこぼしません。
 
+「何もしない」日でも、最終実行の記録 `last-run.json` だけは毎回書き換えて push します
+（後述）。`public/` は変わらないので Pages は配信し直しません。
+
 ```
-.github/state/source.json   ← 前回どの入力から生成したかの記録。git log がそのまま実行ログになる
+.github/state/source.json   ← 前回どの入力から生成したかの記録。判定に使う
+last-run.json               ← 最終実行の記録。毎回上書きする
 ```
 
 手動で叩くときは Actions から **カレンダーデータの更新** を実行します
@@ -148,6 +152,43 @@ python scripts/sync-calendar.py --data ../hino-gomi-dl/data --converter ../hino-
 
 `GITHUB_TOKEN` による push は `push` イベントを発火しない（GitHub の無限ループ防止）ため、
 deploy.yml は自動では走りません。`workflow_call` で update-calendar.yml から明示的に呼びます。
+
+### last-run.json — 最終実行の記録
+
+リポジトリ直下に置く小さな JSON です。**毎回まるごと上書き**され、直前の 1 回ぶんだけを
+持ちます（履歴は git が持っています）。Vite の `publicDir` の外なので、サイトには載りません。
+
+```json
+{
+  "run_at": "2026-08-19T06:30:12+09:00",
+  "result": "ok",
+  "detail": "変更なし（前回と同じ PDF・同じ変換スクリプトです）",
+  "editions": ["r8"],
+  "run_url": "https://github.com/gomicalendar/hino/actions/runs/1234567890"
+}
+```
+
+| キー | 中身 |
+|---|---|
+| `run_at` | 実行時刻（JST）。毎回変わるので、この 1 行が 60 日ルールを解除する「活動」になります |
+| `result` | `ok`（変更なし） / `updated`（`public/` を更新して Pages に配信） / `failed`（ジョブが最後まで通らなかった） |
+| `detail` | 実行の最終行そのまま。失敗した回はその原因が入ります |
+| `editions` | いま公開している版（`.github/state/source.json` の記録） |
+| `run_url` | その回のログへのリンク |
+
+**スケジュール実行はリポジトリが 60 日間コミットの無いまま経つと自動で止まります**
+（GitHub の仕様。issue や tag では解除されず、コミットだけが数えられます）。このリポジトリは
+`public/` の更新が年 1 回程度なので放っておくと確実に止まりますが、`last-run.json` を毎日
+書き換えてコミットすることで、何も起きなかった日も活動として数えられ、止まりません。
+
+そのため、**判定や変換が失敗した回でもこのファイルは書き込んで push します**。ここで
+記録まで止めてしまうと、故障している間に沈黙が続き、60 日後にはスケジュールごと
+無効化されて復旧に気付けなくなるためです。`result` が `failed` のまま何日も並んでいたら
+壊れています。なお失敗した回は `public/` と `.github/state/` を commit しないので、
+中途半端な出力が配信されることはありません。
+
+代わりに `public/` 以外のコミットが毎日 1 件増えます。カレンダーの更新履歴だけを見たい
+ときは `git log -- public` で絞ってください。
 
 ## 構成
 
