@@ -1,0 +1,9 @@
+{
+  "run_at": "2026-08-20T06:46:57+09:00",
+  "result": "ok",
+  "detail": "変更なし（前回と同じ PDF・同じ変換スクリプトです）",
+  "editions": [
+    "r8"
+  ],
+  "run_url": "https://github.com/gomicalendar/hino/actions/runs/32305608663"
+}
