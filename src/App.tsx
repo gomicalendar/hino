@@ -120,11 +120,11 @@ function App() {
 
       <Container maxWidth="md" sx={{ py: { xs: 3, sm: 4 }, flexGrow: 1 }}>
         <Typography variant="h5" component="h1" gutterBottom>
-          ごみ収集日を、いつものカレンダーに
+          日野市のごみ収集日を、いつものカレンダーに
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 3 }}>
-          地区を選ぶと、iCalendar 形式（.ics）で受け取れます。Google カレンダー・
-          Apple カレンダー・Outlook などで使えます。
+          お住まいの地区を選ぶと、ごみ収集日・資源物回収日を iCalendar 形式（.ics）で
+          受け取れます。Google カレンダー・Apple カレンダー・Outlook などで使えます。
         </Typography>
 
         {error && (
@@ -163,8 +163,16 @@ function App() {
                 gutterBottom
                 sx={{ display: 'block' }}
               >
-                {catalog.municipality}が配布する「ごみ・資源分別カレンダー」PDF を変換したデータです。
-                内容は配布元の PDF が正となります（変換日 {formatTimestamp(year.converted_at)}）。
+                本サイトは日野市公式サイトではありません。{catalog.municipality}が配布する
+                「ごみ・資源分別カレンダー」PDF を変換したデータです。内容は
+                <Link
+                  href="https://www.city.hino.lg.jp/kurashi/gomi/kihon/1002863.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  配布元の PDF
+                </Link>
+                が正となります（変換日 {formatTimestamp(year.converted_at)}）。
               </Typography>
               <Typography variant="caption" color="text.secondary" sx={{ display: 'block' }}>
                 JSON でも配布しています：

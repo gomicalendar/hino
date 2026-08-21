@@ -23,7 +23,7 @@ export default function UpcomingCard({ cal, today }: Props) {
   return (
     <Card variant="outlined">
       <CardContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" component="h2" gutterBottom>
           直近 {WINDOW_DAYS} 日の収集日
         </Typography>
 

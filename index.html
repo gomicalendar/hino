@@ -2,6 +2,19 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>日野市ごみカレンダー｜収集日をスマホに登録</title>
+    <meta
+      name="description"
+      content="東京都日野市のごみ収集日・資源物回収日を地区別に確認。ごみ・資源分別カレンダーをGoogleカレンダー、Appleカレンダー、Outlookへ無料で登録・購読できます。"
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+    />
+    <link rel="canonical" href="https://gomicalendar.github.io/hino/" />
+
     <link rel="icon" type="image/x-icon" href="%BASE_URL%favicon.ico" />
     <link rel="icon" type="image/png" sizes="16x16" href="%BASE_URL%favicon-16x16.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="%BASE_URL%favicon-32x32.png" />
@@ -10,24 +23,96 @@
     <link rel="manifest" href="%BASE_URL%site.webmanifest" />
     <meta name="theme-color" content="#4caf50" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1b5e20" media="(prefers-color-scheme: dark)" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="apple-mobile-web-app-title" content="ごみカレンダー" />
-    <title>日野市 ごみカレンダー | ICS ダウンロード</title>
-    <meta
-      name="description"
-      content="東京都日野市の「ごみ・資源分別カレンダー」を、地区ごとの iCalendar（.ics）としてダウンロード・購読できます。"
-    />
+
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="日野市 ごみカレンダー" />
+    <meta property="og:site_name" content="日野市 ごみカレンダー" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta property="og:url" content="https://gomicalendar.github.io/hino/" />
+    <meta property="og:title" content="日野市ごみカレンダー｜収集日をスマホに登録" />
     <meta
       property="og:description"
-      content="地区を選ぶだけで、日野市のごみ収集日をスマホやパソコンのカレンダーに取り込めます。"
+      content="地区を選ぶだけで、日野市のごみ収集日・資源物回収日をスマホやパソコンのカレンダーに無料で登録できます。"
     />
-    <meta property="og:image" content="%BASE_URL%logo.png" />
+    <meta property="og:image" content="https://gomicalendar.github.io/hino/logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="627" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:image:alt" content="日野市 ごみカレンダーのロゴ" />
     <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="日野市ごみカレンダー｜収集日をスマホに登録" />
+    <meta
+      name="twitter:description"
+      content="日野市の地区別ごみ収集日をGoogle・Apple・Outlookのカレンダーに無料で登録できます。"
+    />
+    <meta name="twitter:image" content="https://gomicalendar.github.io/hino/logo.png" />
+    <meta name="twitter:image:alt" content="日野市 ごみカレンダーのロゴ" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://gomicalendar.github.io/hino/#website",
+            "url": "https://gomicalendar.github.io/hino/",
+            "name": "日野市 ごみカレンダー",
+            "alternateName": "日野市ごみ・資源収集カレンダー",
+            "inLanguage": "ja-JP"
+          },
+          {
+            "@type": "WebApplication",
+            "@id": "https://gomicalendar.github.io/hino/#app",
+            "url": "https://gomicalendar.github.io/hino/",
+            "name": "日野市 ごみカレンダー",
+            "description": "東京都日野市の地区別ごみ収集日・資源物回収日を確認し、カレンダーアプリへ登録・購読できる無料Webアプリです。",
+            "inLanguage": "ja-JP",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "Web browser, Android, iOS, macOS, Windows",
+            "browserRequirements": "JavaScript対応のWebブラウザー",
+            "isAccessibleForFree": true,
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "JPY"
+            },
+            "areaServed": {
+              "@type": "AdministrativeArea",
+              "name": "東京都日野市"
+            },
+            "image": "https://gomicalendar.github.io/hino/logo.png",
+            "isPartOf": {
+              "@id": "https://gomicalendar.github.io/hino/#website"
+            },
+            "isBasedOn": "https://www.city.hino.lg.jp/kurashi/gomi/kihon/1002863.html"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <main>
+        <h1>日野市のごみ・資源収集カレンダー</h1>
+        <p>
+          東京都日野市のごみ収集日・資源物回収日を地区別に確認し、iCalendar（.ics）形式で
+          Googleカレンダー、Appleカレンダー、Outlookなどへ無料で登録・購読できます。
+        </p>
+        <h2>対応地区</h2>
+        <p>
+          多摩平、大坂上・日野台・新町・栄町、豊田・東豊田・川辺堀之内・神明、
+          日野本町・日野、上田・宮・万願寺・石田・新井、落川・三沢・高幡、南平、
+          百草・程久保、平山・西平山、東平山・旭が丘・富士町に対応しています。
+        </p>
+        <p>
+          本サイトは日野市公式サイトではありません。収集日データは日野市が公開する
+          <a href="https://www.city.hino.lg.jp/kurashi/gomi/kihon/1002863.html">
+            ごみ・資源分別カレンダー
+          </a>
+          を変換したもので、内容は配布元のPDFをご確認ください。
+        </p>
+      </main>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

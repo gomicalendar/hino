@@ -39,7 +39,7 @@ export default function SubscribeCard({ catalog, year, area }: Props) {
   return (
     <Card variant="outlined">
       <CardContent>
-        <Typography variant="h6" gutterBottom>
+        <Typography variant="h6" component="h2" gutterBottom>
           購読（おすすめ）
         </Typography>
         <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>

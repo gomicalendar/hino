@@ -1,7 +1,7 @@
 {
   "name": "日野市 ごみカレンダー",
   "short_name": "ごみカレンダー",
-  "description": "日野市のごみ収集日を地区ごとの iCalendar（.ics）で配布します。",
+  "description": "東京都日野市のごみ収集日・資源物回収日を地区別に確認し、カレンダーアプリへ登録・購読できます。",
   "lang": "ja",
   "start_url": ".",
   "scope": ".",
