@@ -1,9 +1,9 @@
 {
-  "run_at": "2026-10-19T08:24:29+09:00",
+  "run_at": "2026-10-20T09:27:54+09:00",
   "result": "ok",
   "detail": "変更なし（前回と同じ PDF・同じ変換スクリプトです）",
   "editions": [
     "r8"
   ],
-  "run_url": "https://github.com/gomicalendar/hino/actions/runs/39176376018"
+  "run_url": "https://github.com/gomicalendar/hino/actions/runs/39347777129"
 }
